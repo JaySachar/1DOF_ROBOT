@@ -4,7 +4,7 @@
 #include "../tm4c123gh6pm.h"
 
 // Bit Mask Declaration
-#define PF4 0x10 // Bit mask for PF4 (Input)  (0001 0000)
+#define PF4 0x10  // Bit mask for PF4 (Input)  (0001 0000)
 #define PF3 0x08  // Bit mask for PF3 (output)(0000 1000)
 #define PF2 0x04  // Bit mask for PF2 (output)(0000 0100)
 #define PF1 0x02  // Bit mask for PF1 (output)(0000 0010)
@@ -24,7 +24,7 @@ int main(void)
     PortF_Init(); // Initialize Port F
     while(1){
         if ((GPIO_PORTF_DATA_R & PF4) == 0x00){ // Check if PF4 is LOW (SW1 is pressed)
-            GPIO_PORTF_DATA_R |= P2; // Set PF2 HIGH
+            GPIO_PORTF_DATA_R |= PF2; // Set PF2 HIGH
         }
         else {
         GPIO_PORTF_DATA_R &= ~PF2; // Set PF2 LOW
@@ -32,7 +32,6 @@ int main(void)
 
         GPIO_PORTF_DATA_R &= ~(PF3 | PF1); // Ensure PF3 and PF1 are LOW
     }
-    return 0;
 }
 
 void PortF_Init(void) {
