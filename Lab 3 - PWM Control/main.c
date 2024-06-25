@@ -5,8 +5,7 @@
 void SysTickInit(void);
 void SysTickHandler(void);
 void PortFInit(void);
-void GPIOInterruptInit(void);
-void SW2_Handler(void);
+void SW1_Handler(void);
 
 int main(void)
 {
@@ -82,10 +81,10 @@ void PWM_Control(void){
     PWM1_3_GENA_R |= 0x0000008C;
     PWM1_3_GENB_R |= 0x0000080C;
 
-    PWM1_3_LOAD_R |= 0x0000018F; // Set requested period minus one
+    PWM1_3_LOAD_R |= 400000 - 1; // Set the PWM Frequency to 100Hz (80 MHz / 2 / 100)
 
     PWM1_3_CMPA_R = 0; // Set PF2 to be a 25% duty cycle
-    PWM1_3_CMPB_R = 4000; // Set PF3 to be complimentary with a 75% duty cycle
+    PWM1_3_CMPB_R = 0; // Set PF3 to be complimentary with a 75% duty cycle
 
     // Enable the deadband geneartor with a delay of 10 cycles
     PWM1_3_DBCTL_R = PWM_1_DBCTL_ENABLE | PWM_1_DBCTL_MODE_GENA | PWM_1_DBCTL_MODE_GENB;
@@ -99,12 +98,12 @@ void PWM_Control(void){
 void SW1_Handler(void){
     static int count = 1;
     if (count != 11){
-        PWM1_3_CMPA_R += 400;
-        PWM1_3_CMPB_R = 4000 - PWM1_3_CMPA_R;
+        PWM1_3_CMPA_R += 40000;
+        PWM1_3_CMPB_R = 400000 - PWM1_3_CMPA_R;
     }
     else {
         PWM1_3_CMPA_R = 0;
-        PWM1_3_CMPB_R = 4000;
+        PWM1_3_CMPB_R = 400000;
         count = 1;
     }
 
