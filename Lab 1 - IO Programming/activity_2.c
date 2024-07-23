@@ -59,6 +59,7 @@ void PortF_Init(void) {
     GPIO_PORTF_DEN_R = 0x1F;
 }
 
-void delay(void):
+void delay(void){
     volatile uint32_t time;
     for (time = 0; time <200000; time++);
+}

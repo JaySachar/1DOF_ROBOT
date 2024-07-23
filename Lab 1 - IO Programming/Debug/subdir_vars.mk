@@ -9,27 +9,33 @@ CMD_SRCS += \
 ../tm4c123gh6pm.cmd 
 
 C_SRCS += \
-../hello.c \
+../activity_1.c \
+../activity_2.c \
 ../tm4c123gh6pm_startup_ccs.c 
 
 C_DEPS += \
-./hello.d \
+./activity_1.d \
+./activity_2.d \
 ./tm4c123gh6pm_startup_ccs.d 
 
 OBJS += \
-./hello.obj \
+./activity_1.obj \
+./activity_2.obj \
 ./tm4c123gh6pm_startup_ccs.obj 
 
 OBJS__QUOTED += \
-"hello.obj" \
+"activity_1.obj" \
+"activity_2.obj" \
 "tm4c123gh6pm_startup_ccs.obj" 
 
 C_DEPS__QUOTED += \
-"hello.d" \
+"activity_1.d" \
+"activity_2.d" \
 "tm4c123gh6pm_startup_ccs.d" 
 
 C_SRCS__QUOTED += \
-"../hello.c" \
+"../activity_1.c" \
+"../activity_2.c" \
 "../tm4c123gh6pm_startup_ccs.c" 
 
 

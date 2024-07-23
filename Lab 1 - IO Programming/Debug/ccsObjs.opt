@@ -1,4 +1,5 @@
-"./hello.obj"
+"./activity_1.obj"
+"./activity_2.obj"
 "./tm4c123gh6pm_startup_ccs.obj"
 "../tm4c123gh6pm.cmd"
 -llibc.a
