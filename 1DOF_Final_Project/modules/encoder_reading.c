@@ -30,7 +30,7 @@ void QEI1_Init (void){
     QEI1_CTL_R &= ~QEI_CTL_ENABLE;
 
     // Configure QEI1 settings
-    // QEI1_CTL_R |= QEI_CTL_SWAP; // Swap PhA and PhB
+    QEI1_CTL_R |= QEI_CTL_SWAP; // Swap PhA and PhB
     // QEI1_CTL_R |= QEI_CTL_SIGMODE; // Count direction as per PhA and PhB
     QEI1_CTL_R |= QEI_CTL_CAPMODE; // Quadrature mode
 

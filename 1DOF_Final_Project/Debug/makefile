@@ -13,10 +13,12 @@ ORDERED_OBJS += \
 "./main.obj" \
 "./tm4c123gh6pm_startup_ccs.obj" \
 "./modules/PLL_Init.obj" \
+"./modules/arm_calibration.obj" \
 "./modules/ctrl_loop.obj" \
 "./modules/encoder_reading.obj" \
 "./modules/motor_speed_set.obj" \
 "./modules/pot_reading.obj" \
+"./modules/toggle_em.obj" \
 "../tm4c123gh6pm.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
@@ -149,8 +151,8 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main.obj" "tm4c123gh6pm_startup_ccs.obj" "modules\PLL_Init.obj" "modules\ctrl_loop.obj" "modules\encoder_reading.obj" "modules\motor_speed_set.obj" "modules\pot_reading.obj" 
-	-$(RM) "main.d" "tm4c123gh6pm_startup_ccs.d" "modules\PLL_Init.d" "modules\ctrl_loop.d" "modules\encoder_reading.d" "modules\motor_speed_set.d" "modules\pot_reading.d" 
+	-$(RM) "main.obj" "tm4c123gh6pm_startup_ccs.obj" "modules\PLL_Init.obj" "modules\arm_calibration.obj" "modules\ctrl_loop.obj" "modules\encoder_reading.obj" "modules\motor_speed_set.obj" "modules\pot_reading.obj" "modules\toggle_em.obj" 
+	-$(RM) "main.d" "tm4c123gh6pm_startup_ccs.d" "modules\PLL_Init.d" "modules\arm_calibration.d" "modules\ctrl_loop.d" "modules\encoder_reading.d" "modules\motor_speed_set.d" "modules\pot_reading.d" "modules\toggle_em.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

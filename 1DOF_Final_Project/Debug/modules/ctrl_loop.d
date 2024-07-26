@@ -12,7 +12,7 @@ modules/ctrl_loop.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/in
 modules/ctrl_loop.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_types.h
 modules/ctrl_loop.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_stdint.h
 modules/ctrl_loop.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_stdint.h
-modules/ctrl_loop.obj: C:/Users/Jay/Documents/Github/MSE450/1DOF_Final_Project/tm4c123gh6pm.h
+modules/ctrl_loop.obj: C:/Users/kushs/Documents/MSE450/1DOF_Final_Project/tm4c123gh6pm.h
 modules/ctrl_loop.obj: ../modules/encoder_reading.h
 modules/ctrl_loop.obj: ../modules/motor_speed_set.h
 
@@ -40,7 +40,7 @@ C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_stdint.h
 
 C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_stdint.h:
 
-C:/Users/Jay/Documents/Github/MSE450/1DOF_Final_Project/tm4c123gh6pm.h:
+C:/Users/kushs/Documents/MSE450/1DOF_Final_Project/tm4c123gh6pm.h:
 
 ../modules/encoder_reading.h:
 

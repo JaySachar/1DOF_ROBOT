@@ -5,9 +5,10 @@
 #include "modules/PLL_Init.h"
 #include "modules/pot_reading.h"
 #include "modules/ctrl_loop.h"
-
+#include "modules/toggle_em.h"
 
 void GPIOF_Init(void);
+
 int main(void) {
     QEI1_Init();   // Initialize QEI1
     GPIOF_Init();   // Initialize GPIO for debugging
@@ -15,16 +16,25 @@ int main(void) {
     ADC0_Init();
     sample_sequencer_init();
     PWM_Init();
+    ElectromagnetInit();
 
     float desired_position = 90.0; // degrees
     float current_position;
+    uint32_t data[8];
+    int count = 1;
     while(1){
+        if (count == 1){
+            QEI1_POS_R = 0;
+            count++;
+        }
         current_position = QEI1_GetMotorPosition();
         ctrl_loop(desired_position, current_position);
-        //gen_PWM(HB1, 0.5);
+        // gen_PWM(HB1, 0.5);
+        // pot_read(data);
+        // ElectromagnetControl(1);
+        // ElectromagnetControl(0);
     }
 }
-
 void GPIOF_Init(void) {
     SYSCTL_RCGCGPIO_R |= 0x20;       // Enable clock for Port F
     while ((SYSCTL_PRGPIO_R & 0x20) == 0) {}; // Wait for Port F to be ready

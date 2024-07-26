@@ -6,6 +6,7 @@
 #include "pot_reading.h"
 // Function Declarations
 void calibrate_arm_position(float ADCVal); // This function will take the ADC reading from the potentiometer
-                                           // Determine which angle it is relatively from the lef
+                                           // Determine which angle it is relatively from the left side (where the rubber bumper is) Bump her? I hardly know her!
+
 
 #endif // ARM_CALIBRATION_H

@@ -16,17 +16,15 @@ void gen_PWM(HBridgePin pin, float dc){
     // My idea is that we call this for generating the PWM for HB1 and HB2. So if we want
     // a 25% duty cycle for HB1, we'd do gen_PWM('1', 0.25), similarly
     // a 75% duty cycle will be set for the other
-    uint32_t load_value = PWM0_2_LOAD_R - 1;
+    uint32_t load_value = PWM0_2_LOAD_R - 10;
 
     switch(pin){
         case HB2: // Case where HB1 gets main PWM while HB2 gets comp
             // Set PWM for M0PWM4
             PWM0_2_CMPA_R = dc*load_value;
-            PWM0_2_CMPB_R = (1-dc)*load_value;
             break;
 
         case HB1:
-            PWM0_2_CMPA_R = (1-dc)*load_value;
             PWM0_2_CMPB_R = dc*load_value;
             break;
 

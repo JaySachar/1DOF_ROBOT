@@ -1,9 +1,11 @@
 "./main.obj"
 "./tm4c123gh6pm_startup_ccs.obj"
 "./modules/PLL_Init.obj"
+"./modules/arm_calibration.obj"
 "./modules/ctrl_loop.obj"
 "./modules/encoder_reading.obj"
 "./modules/motor_speed_set.obj"
 "./modules/pot_reading.obj"
+"./modules/toggle_em.obj"
 "../tm4c123gh6pm.cmd"
 -llibc.a

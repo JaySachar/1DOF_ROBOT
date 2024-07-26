@@ -17,6 +17,8 @@ main.obj: ../modules/motor_speed_set.h
 main.obj: ../modules/PLL_Init.h
 main.obj: ../modules/pot_reading.h
 main.obj: ../modules/ctrl_loop.h
+main.obj: ../modules/toggle_em.h
+main.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h
 
 ../main.c:
 
@@ -51,4 +53,8 @@ C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_stdint.h:
 ../modules/pot_reading.h:
 
 ../modules/ctrl_loop.h:
+
+../modules/toggle_em.h:
+
+C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h:
 
